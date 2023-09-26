@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(green, white);
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size:x-large
+}
+.circles {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}/* make circles border-radius 50%
+display flex forward gets the numbers centered */
+
+
