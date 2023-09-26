@@ -19,15 +19,21 @@ h1 {
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: #333;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem;
-}/* make circles border-radius 50%
+    pointer-events: none;
+    /* no click trigger. everything is disabled */
+}/* make circles with border-radius 50%
 display flex forward gets the numbers centered */
+.circle.active {
+    background-image:url(speedButton.png);
+
+}
 
 
