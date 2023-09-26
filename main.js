@@ -1,14 +1,26 @@
 const startButton = document.querySelector('#start');
 const endButton = document.querySelector('#end');
-//take all circles with circle class
+//take all circles with circle class and also queryselectorAll creates a nodelist
 const circles = document.querySelectorAll('.circle');
+//function to tell wich circle was clicked
+const scoreDisplay = document.querySelector('.score')
 
-const clickCircle = () => {
-    console.log('circle was clicked');
+let score = 0;
+
+const getRndInteger = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+console.log(getRndInteger(0, 3))
+
+const clickCircle = (i) => {
+    console.log('circle was clicked', i);
+    score += 10;
+    scoreDisplay.textContent = score;
 }
 
-circles.forEach((circle) => {
-    circle.addEventListener('click', clickCircle)
+circles.forEach((circle, i) => {
+    circle.addEventListener('click', () => clickCircle(i))
 })
 
 
