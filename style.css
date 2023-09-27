@@ -7,6 +7,7 @@
 body {
     background-image: linear-gradient(green, white);
     background-attachment: fixed;
+    text-align: center;
 }
 
 h1 {
