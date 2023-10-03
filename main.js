@@ -7,7 +7,6 @@ const scoreDisplay = document.querySelector('.score');
 let timer;
 let pace = 1000;
 let active = 0;
-
 let score = 0;
 let rounds = 0;
 //math.random 0 to 3
@@ -21,6 +20,9 @@ const clickCircle = (i) => {
     if (i !== active) {
         return endGame();
     }
+    //when clicked background changes
+    circles[active].style.backgroundImage = 'url(emptyCircle.jpg)';
+
     rounds--
     console.log('circle was clicked', i);
     score += 10;
@@ -37,18 +39,20 @@ const enableEvents = () => {
 }
 
 const startGame = () => {
+    //resetting emptycircle
+circles[active].style.backgroundImage = '';
+startButton.style.display = "none";
+endButton.classList.remove('end')
     if(rounds >= 3) {
         return endGame();
     }
     enableEvents();
     const newActive = pickNew(active);
-
     circles[newActive].classList.toggle('active');
     circles[active].classList.remove('active');
-
-
-    active = newActive;
+    circles[active].remove
     timer = setTimeout(startGame, pace);
+    active = newActive;
     pace -= 10;
     rounds++;
     function pickNew(active) {
@@ -67,6 +71,9 @@ const startGame = () => {
 }
 
 const endGame = () => {
+    startButton.style.removeProperty('display');
+    endButton.classList.add('end');
+    
     console.log('game ended');
     clearTimeout(timer);
     resetGame;

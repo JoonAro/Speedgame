@@ -8,8 +8,14 @@ body {
     background-image: linear-gradient(green, white);
     background-attachment: fixed;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:azure
 }
 
+.score {
+    background: #333;
+    
+}
 h1 {
     font-size:x-large
 }
@@ -22,6 +28,7 @@ h1 {
 .circle {
     width: 200px;
     height: 200px;
+    /* background-image: url(emptyCircle.jpg); */
     background-color: #333;
     border-radius: 50%;
     display: flex;
@@ -33,8 +40,27 @@ h1 {
 }/* make circles with border-radius 50%
 display flex forward gets the numbers centered */
 .circle.active {
-    background-image:url(speedButton.png);
+    background-image:url(highlight.jpg);
 
 }
+
+.clicked {
+    background-image:url(emptyCircle.jpg);
+}
+
+.end {
+    display: none;
+}
+
+/* .scoreboard {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: greenyellow;
+    align-items: center;
+    height:10rem;
+} */
+
+
 
 
