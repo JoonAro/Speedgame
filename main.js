@@ -9,6 +9,10 @@ let pace = 1000;
 let active = 0;
 let score = 0;
 let rounds = 0;
+const audio = new Audio('big-punch-short-with-male-moan-83735.mp3');
+const audio2 = new Audio('hard-punch-80578.mp3');
+        
+const audio3 = new Audio('punch-2-37333.mp3');
 //math.random 0 to 3
 const getRndInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -22,8 +26,7 @@ const clickCircle = (i) => {
     }
     //when clicked background changes
     circles[active].style.backgroundImage = 'url(emptyCircle.jpg)';
-
-    rounds--
+    rounds--;
     console.log('circle was clicked', i);
     score += 10;
     scoreDisplay.textContent = score;
@@ -39,6 +42,7 @@ const enableEvents = () => {
 }
 
 const startGame = () => {
+    audio2.pause();
     //resetting emptycircle
 circles[active].style.backgroundImage = '';
 startButton.style.display = "none";

@@ -28,7 +28,6 @@ h1 {
 .circle {
     width: 200px;
     height: 200px;
-    /* background-image: url(emptyCircle.jpg); */
     background-color: #333;
     border-radius: 50%;
     display: flex;
@@ -44,9 +43,9 @@ display flex forward gets the numbers centered */
 
 }
 
-.clicked {
+/* .clicked {
     background-image:url(emptyCircle.jpg);
-}
+} */
 
 .end {
     display: none;
