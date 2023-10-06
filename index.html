@@ -2,30 +2,44 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>speedgame</title>
   </head>
   <body>
-    <h1>speedgame</h1>
-    <p>score <span class="score">0</span></p>
-
-    <div class="circles">
-      <div
-        class="circle"
-        onclick="new Audio('hard-punch-80578.mp3').play()"
-      ></div>
-      <div class="circle" onclick="new Audio('punch-2-37333.mp3').play()"></div>
-      <div
-        class="circle"
-        onclick="new Audio('big-punch-short-with-male-moan-83735.mp3')
+    <header>
+      <h1>speedgame</h1>
+    </header>
+    <p><span class="score">0 pts</span></p>
+    <div class="extra"></div>
+    <div class="container">
+      <div class="circles">
+        <div
+          class="circle"
+          onclick="new Audio('hard-punch-80578.mp3').play()"
+        ></div>
+        <div
+          class="circle"
+          onclick="new Audio('punch-2-37333.mp3').play()"
+        ></div>
+        <div
+          class="circle"
+          onclick="new Audio('big-punch-short-with-male-moan-83735.mp3')
         .play()"
-      ></div>
-      <div class="circle" onclick="new Audio('punch-2-37333.mp3').play()"></div>
+        ></div>
+        <div
+          class="circle"
+          onclick="new Audio('punch-2-37333.mp3').play()"
+        ></div>
+      </div>
+      <button class="start" id="start">Start</button>
+      <button class="end" id="end">End</button>
     </div>
-    <button class="start" id="start">Start</button>
-    <button class="end" id="end">End</button>
-    <div class="scoreboard">Your score:</div>
     <p>Copyright Joona Aronen 2023</p>
+    <div id="modal" class="scoreboard">
+      Your score: <span class="close">&times;</span>
+      <p class="feedback">Way to go!</p>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

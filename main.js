@@ -17,7 +17,11 @@ const audio3 = new Audio('punch-2-37333.mp3');
 const getRndInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
-
+  const disableEvents = () => {
+    circles.forEach(circle => {
+        circle.style.pointerEvents = "none";
+    })
+}
 console.log(getRndInteger(0, 3))
 //if i is not active(you push the wrong circle game ends)
 const clickCircle = (i) => {
@@ -25,11 +29,12 @@ const clickCircle = (i) => {
         return endGame();
     }
     //when clicked background changes
-    circles[active].style.backgroundImage = 'url(emptyCircle.jpg)';
+    disableEvents();
+    circles[active].style.backgroundImage = 'url(reaction3.jpg)';
     rounds--;
     console.log('circle was clicked', i);
     score += 10;
-    scoreDisplay.textContent = score;
+    scoreDisplay.textContent = score + 'pts';
 }
 
 circles.forEach((circle, i) => {
@@ -42,7 +47,6 @@ const enableEvents = () => {
 }
 
 const startGame = () => {
-    audio2.pause();
     //resetting emptycircle
 circles[active].style.backgroundImage = '';
 startButton.style.display = "none";
@@ -78,6 +82,12 @@ const endGame = () => {
     startButton.style.removeProperty('display');
     endButton.classList.add('end');
     
+    const disableEvents = () => {
+        circles.forEach(circle => {
+            circle.style.pointerEvents = "none";
+        })
+    }
+    disableEvents();
     console.log('game ended');
     clearTimeout(timer);
     resetGame;

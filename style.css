@@ -5,19 +5,48 @@
 }
 
 body {
-    background-image: linear-gradient(green, white);
+    background-color: #333;
     background-attachment: fixed;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:azure
+    color:azure;
+    font-size: xx-large;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    flex-direction: column;
 }
 
-.score {
-    background: #333;
+.container {
+    background: green;
+    border-radius: 5px;
+    padding: 1rem, 0, 1rem, 0;
+    
     
 }
+
+.extra{
+    display:flex;
+    background-image: linear-gradient(rgb(0, 66, 0), green);
+    width: 100%;
+    height: 100px;
+    
+
+}
+.score {
+    display: flex;
+min-width: 100px; 
+background-image: linear-gradient(white ,rgb(110, 150, 252));
+padding: 1rem;
+
+
+}
 h1 {
-    font-size:x-large
+    font-size:xx-large;
+    padding: 2rem;
 }
 .circles {
     display:flex;
@@ -29,36 +58,43 @@ h1 {
     width: 200px;
     height: 200px;
     background-color: #333;
+    background-image: url(wormhole3.jpg);
     border-radius: 50%;
+    margin: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
     pointer-events: none;
     /* no click trigger. everything is disabled */
 }/* make circles with border-radius 50%
 display flex forward gets the numbers centered */
 .circle.active {
-    background-image:url(highlight.jpg);
+    background-image:url(face2.jpg);
 
 }
 
-/* .clicked {
-    background-image:url(emptyCircle.jpg);
-} */
 
 .end {
     display: none;
 }
 
-/* .scoreboard {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: greenyellow;
-    align-items: center;
-    height:10rem;
-} */
+.start {
+    height:20px;
+    width: 100px;
+    background:#333;
+}
+
+ .scoreboard {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
 
 
 
