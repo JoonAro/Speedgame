@@ -92,23 +92,26 @@ display flex forward gets the numbers centered */
     width: 191px;
 }
 
+.showEnd:hover {
+    background-image: url(quitHover2.jpg);
+}
+
 /* .showEnd:hover {
     background-image: url(quitHover.jpg);
 } */
 
 .startImg {
-    padding-top: 1.8rem;
     display: flex;
-    position:relative;
-    top: -50px;
+    background-image: url(startNormal.jpg);
+    padding-top: 1.8rem;
     justify-content: center;
     align-items: center;
-    height: 180px;
-    width: 180px;
-    border-radius: 50%;
-    background-image: url(startGame.jpg);
-    background-size: contain;
-    font-size: medium;
+    height: 152px;
+    width: 191px;
+}
+
+.startImg:hover {
+    background-image: url(startHover.jpg);
 }
 .start {
     height:60px;
