@@ -51,6 +51,8 @@ const startGame = () => {
 circles[active].style.backgroundImage = '';
 startButton.style.display = "none";
 endButton.classList.remove('end')
+endButton.classList.add('showEnd')
+scoreDisplay.style.display = 'flex';
     if(rounds >= 3) {
         return endGame();
     }
@@ -81,6 +83,8 @@ endButton.classList.remove('end')
 const endGame = () => {
     startButton.style.removeProperty('display');
     endButton.classList.add('end');
+    endButton.classList.remove('showEnd')
+    scoreDisplay.style.display = 'none';
     
     const disableEvents = () => {
         circles.forEach(circle => {
