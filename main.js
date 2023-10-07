@@ -4,6 +4,10 @@ const endButton = document.querySelector('#end');
 const circles = document.querySelectorAll('.circle');
 //function to tell wich circle was clicked
 const scoreDisplay = document.querySelector('.score');
+const modal = document.querySelector('#modal');
+const feedBack = document.querySelector('.feedback');
+const finalScore = document.querySelector('.finalScore');
+const close = document.querySelector('.close');
 let timer;
 let pace = 1000;
 let active = 0;
@@ -83,8 +87,9 @@ scoreDisplay.style.display = 'flex';
 const endGame = () => {
     startButton.style.removeProperty('display');
     endButton.classList.add('end');
-    endButton.classList.remove('showEnd')
-    scoreDisplay.style.display = 'none';
+    endButton.classList.remove('showEnd');
+  /*   scoreDisplay.style.display = 'none'; */
+    modal.style.display = 'flex';
     
     const disableEvents = () => {
         circles.forEach(circle => {
@@ -94,7 +99,18 @@ const endGame = () => {
     disableEvents();
     console.log('game ended');
     clearTimeout(timer);
-    resetGame;
+    finalScore.textContent = `You scored ${score} pts!`
+    if (score < 150) {
+        feedBack.textContent = 'First time playing?';
+    } else if (score >= 150 && score < 300) {
+        feedBack.textContent = 'Good job!';
+    } else if (score >= 300 && score < 350) {
+        feedBack.textContent = 'Amazing skills!';
+    } else if (score >= 350) {
+        feedBack.textContent = 'Legendary! You have reached top rank. Congratulations!'
+    }
+
+    /* resetGame(); */
 }
 const resetGame = () => {
 window.location.reload();

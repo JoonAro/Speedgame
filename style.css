@@ -22,7 +22,7 @@ header {
 .extra3 {
 display: flex;
 width: 100%;
-background-image: linear-gradient(white ,rgb(47, 116, 255));
+background-image: linear-gradient(white , rgb(82, 130, 251),rgb(72, 114, 222));
 height: 100px;
 }
 
@@ -96,10 +96,6 @@ display flex forward gets the numbers centered */
     background-image: url(quitHover2.jpg);
 }
 
-/* .showEnd:hover {
-    background-image: url(quitHover.jpg);
-} */
-
 .startImg {
     display: flex;
     background-image: url(startNormal.jpg);
@@ -113,11 +109,6 @@ display flex forward gets the numbers centered */
 .startImg:hover {
     background-image: url(startHover.jpg);
 }
-.start {
-    height:60px;
-    width: 200px;
-    background:#dca855;
-}
 
 .extra2 {
     display:flex;
@@ -130,13 +121,63 @@ display flex forward gets the numbers centered */
 
  .scoreboard {
     display: none;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(to bottom, white,  rgb(82, 130, 251), rgb(72, 114, 222), rgb(0, 66, 0), rgb(0, 66, 0), rgb(0, 98, 0), green, green, green);
+}
+
+h2 {
+    padding: 1rem;
+}
+
+p {
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 75%;
+    margin-top: 5rem;
     background: #333;
+    height: 80%;
+    border-radius: 5px;
+    word-spacing: 2.5px;
+}
+
+.sameLine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    line-height: 3.5rem;
+}
+
+.close {
+    display: flex;
+    margin: 0 0 0 92%;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: rgb(188, 0, 0);
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
 }
 
 

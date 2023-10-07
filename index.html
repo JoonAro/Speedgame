@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>speedgame</title>
+    <title>Speedgame</title>
   </head>
   <body>
     <header>
-      <h1>speedgame</h1>
+      <h1>Speedgame</h1>
     </header>
     <div class="extra3"></div>
     <div class="extra">
@@ -48,10 +48,17 @@
       <!-- <button class="start" id="start">Start</button>
       <button class="end" id="end">End</button> -->
     </div>
-    <p>Copyright Joona Aronen 2023</p>
+    <p>© Joona Aronen 2023</p>
     <div id="modal" class="scoreboard">
-      Your score: <span class="close">&times;</span>
-      <p class="feedback">Way to go!</p>
+      <div class="content">
+        <span class="close" onclick="resetGame()">&times;</span>
+        <h2>Speedgame</h2>
+        <div class="sameLine">
+        <p class="finalScore">0</p>
+        <p class="feedback">Way to go!</p>
+        </div>
+      </div>
+      <p class="copyright">© Joona Aronen 2023</p>
     </div>
     <script src="main.js"></script>
   </body>
