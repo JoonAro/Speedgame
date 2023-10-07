@@ -8,6 +8,7 @@ const modal = document.querySelector('#modal');
 const feedBack = document.querySelector('.feedback');
 const finalScore = document.querySelector('.finalScore');
 const close = document.querySelector('.close');
+const reset = document.querySelector('.reset');
 let timer;
 let pace = 1000;
 let active = 0;

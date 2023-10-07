@@ -149,8 +149,10 @@ p {
     margin-top: 5rem;
     background: #333;
     height: 80%;
+    min-height:730px;
     border-radius: 5px;
     word-spacing: 2.5px;
+    padding: 0 7px 0 7px;
 }
 
 .sameLine {
@@ -164,8 +166,10 @@ p {
 }
 
 .close {
-    display: flex;
-    margin: 0 0 0 92%;
+    margin: 0 0 0 96%;
+    /* position: relative;
+    top: 0;
+    right: 0; */
 }
 
 .close:hover {
@@ -177,10 +181,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem;
+    padding: 1rem;
 }
 
-
+.reset:hover {
+    cursor: pointer;
+}
 
 
 
