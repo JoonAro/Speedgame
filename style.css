@@ -12,6 +12,7 @@ body {
     color:azure;
     font-size: xx-large;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -19,6 +20,7 @@ header {
     background-color: #333;
     flex-direction: column;
 }
+
 .extra3 {
 display: flex;
 width: 100%;
@@ -29,9 +31,6 @@ height: 100px;
 .container {
     background: green;
     padding: 1rem, 0, 200px, 0;
-
-    
-    
 }
 
 .extra {
@@ -42,6 +41,7 @@ height: 100px;
     width: 100%;
     height: 100px;
 }
+
 .score {
 display: none;
 align-items: center;
@@ -49,10 +49,12 @@ justify-content: center;
 min-width: 100px; 
 height: 100px;
 }
+
 h1 {
     font-size:xx-large;
     padding: 1.5rem;
 }
+
 .circles {
     display:flex;
     flex-wrap: wrap;
@@ -75,9 +77,7 @@ h1 {
 display flex forward gets the numbers centered */
 .circle.active {
     background-image:url(face2.jpg);
-
 }
-
 
 .end {
     display: none;
@@ -167,9 +167,6 @@ p {
 
 .close {
     margin: 0 0 0 96%;
-    /* position: relative;
-    top: 0;
-    right: 0; */
 }
 
 .close:hover {
@@ -187,6 +184,3 @@ p {
 .reset:hover {
     cursor: pointer;
 }
-
-
-

@@ -15,8 +15,7 @@ let active = 0;
 let score = 0;
 let rounds = 0;
 const audio = new Audio('big-punch-short-with-male-moan-83735.mp3');
-const audio2 = new Audio('hard-punch-80578.mp3');
-        
+const audio2 = new Audio('hard-punch-80578.mp3');        
 const audio3 = new Audio('punch-2-37333.mp3');
 //math.random 0 to 3
 const getRndInteger = (min, max) => {
@@ -41,7 +40,6 @@ const clickCircle = (i) => {
     score += 10;
     scoreDisplay.textContent = score + 'pts';
 }
-
 circles.forEach((circle, i) => {
     circle.addEventListener('click', () => clickCircle(i))
 })
@@ -50,7 +48,6 @@ const enableEvents = () => {
         circle.style.pointerEvents = "auto";
     })
 }
-
 const startGame = () => {
     //resetting emptycircle
 circles[active].style.backgroundImage = '';
@@ -65,7 +62,6 @@ scoreDisplay.style.display = 'flex';
     const newActive = pickNew(active);
     circles[newActive].classList.toggle('active');
     circles[active].classList.remove('active');
-    circles[active].remove
     timer = setTimeout(startGame, pace);
     active = newActive;
     pace -= 10;
@@ -76,22 +72,16 @@ scoreDisplay.style.display = 'flex';
         if (newActive !== active) {
             return newActive;
         }
-            return pickNew(active);
-        
-
+            return pickNew(active);        
     }
     console.log(active);
-
-
 }
-
 const endGame = () => {
     startButton.style.removeProperty('display');
     endButton.classList.add('end');
     endButton.classList.remove('showEnd');
   /*   scoreDisplay.style.display = 'none'; */
-    modal.style.display = 'flex';
-    
+    modal.style.display = 'flex';   
     const disableEvents = () => {
         circles.forEach(circle => {
             circle.style.pointerEvents = "none";
@@ -100,7 +90,7 @@ const endGame = () => {
     disableEvents();
     console.log('game ended');
     clearTimeout(timer);
-    finalScore.textContent = `You scored ${score} pts!`
+    finalScore.textContent = `You scored ${score} pts!`;
     if (score < 150) {
         feedBack.textContent = 'First time playing?';
     } else if (score >= 150 && score < 300) {
@@ -108,16 +98,11 @@ const endGame = () => {
     } else if (score >= 300 && score < 350) {
         feedBack.textContent = 'Amazing skills!';
     } else if (score >= 350) {
-        feedBack.textContent = 'Legendary! You have reached top rank. Congratulations!'
+        feedBack.textContent = 'Legendary! You have reached top rank. Congratulations!';
     }
-
-    /* resetGame(); */
 }
 const resetGame = () => {
 window.location.reload();
 }
-
-
-
-startButton.addEventListener('click', startGame)
-endButton.addEventListener('click', endGame)
+startButton.addEventListener('click', startGame);
+endButton.addEventListener('click', endGame);
